@@ -17,7 +17,7 @@ const notesData = [
   {
     id: 4,
     content: "Separate directories renders better application structure",
-    important: true,
+    important: false,
   },
 ];
 
