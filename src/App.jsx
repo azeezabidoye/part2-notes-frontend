@@ -8,14 +8,16 @@ const App = (props) => {
   const [newNote, setNewNote] = useState(" ");
   const [showAll, setShowAll] = useState(true);
 
-  useEffect(() => {
+  const hook = () => {
     console.log(useEffect);
     axios.get("http://localhost:3001/notes").then((response) => {
       console.log(`promise fulfilled ✅`);
       setNotes(response.data);
     });
     console.log("render", notes.length, notes);
-  }, []);
+  };
+
+  useEffect(hook, []);
 
   const notesToShow = showAll
     ? notes
