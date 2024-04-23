@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import notesData from "./data/notesData";
 import App from "./App";
-import axios from "axios";
+import "./index.css";
 
 // const promise = axios.get("http://localhost:3001/notes");
 // promise.then((response) => console.log(response.data));
