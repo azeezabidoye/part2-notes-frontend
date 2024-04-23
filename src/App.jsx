@@ -74,6 +74,22 @@ const App = (props) => {
       });
   };
 
+  const Footer = () => {
+    const footerStyle = {
+      color: "green",
+      fontStyle: "italic",
+      fontSize: 16,
+    };
+    return (
+      <div style={footerStyle}>
+        <br />
+        <em>
+          Note app, Department of Computer Science, University of Helsinki 2024
+        </em>
+      </div>
+    );
+  };
+
   return (
     <div>
       <h1>Notes</h1>
@@ -95,6 +111,8 @@ const App = (props) => {
         <input value={newNote} onChange={handleNoteChange} />
         <button type="submit">Save</button>
       </form>
+
+      <Footer />
     </div>
   );
 };
