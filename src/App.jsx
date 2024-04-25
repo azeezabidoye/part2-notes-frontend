@@ -16,7 +16,12 @@ const App = (props) => {
     noteService.getAll().then((initialNote) => setNotes(initialNote));
     console.log("render", notes.length, notes);
   };
-  useEffect(hook, []);
+
+  if (!notes) {
+    return null;
+  } else {
+    useEffect(hook, []);
+  }
 
   const notesToShow = showAll
     ? notes
